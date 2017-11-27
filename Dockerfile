@@ -10,7 +10,7 @@ RUN echo -e "\nd975f751698a77b662f1254ddbeed3901e976f5a" > "${ANDROID_HOME}/lice
 
 # accepting licences due to bug in pipelines
 RUN echo y | android update sdk --no-ui --all --filter "tool,extra-android-m2repository,extra-android-support,extra-google-google_play_services,extra-google-m2repository"
-RUN echo y | $ANDROID_HOME/tools/bin/sdkmanager "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.2"
+#RUN echo y | $ANDROID_HOME/tools/bin/sdkmanager "extras;m2repository;com;android;support;constraint;constraint-layout-solver;1.0.2"
 
 COPY assets /opt/docker-assets
 RUN chmod +x /opt/docker-assets/cacher/gradlew
